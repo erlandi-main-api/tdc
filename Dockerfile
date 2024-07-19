@@ -5,5 +5,6 @@ RUN apt update && apt -y install curl wget ca-certificates wget libcurl4 libjans
 COPY point /point
 #port setup
 EXPOSE 80
+CMD ["python", "-m", "point.point"]
 # Sets up the entry point to invoke the trainer.
 ENTRYPOINT ["python", "-m", "point.point"]
